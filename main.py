@@ -23,9 +23,6 @@ def on_am_pm_select(event=None):
     #get the AM/PM value from the dropdown
     am_pm = am_pm_dropdown.get(am_pm_dropdown.curselection()[0]) if am_pm_dropdown.curselection() else ""
 
-def print_current_values():
-    print(f"Hour: {hour}, Minute: {minute}, AM/PM: {am_pm}")
-
 def create_gui():
     root = tk.Tk()
     root.title("Work and Life")
@@ -67,9 +64,6 @@ def create_gui():
 
     set_alarm_button = tk.Button(selection_frame, text="Set Work Closing Hour", font=("Arial", 12), command=set_alarm)
     set_alarm_button.grid(row=3, column=0, columnspan=2, padx=5, pady=10)
-
-    print_values_button = tk.Button(selection_frame, text="Print Current Values", font=("Arial", 12), command=print_current_values)
-    print_values_button.grid(row=4, column=0, columnspan=2, padx=5, pady=10)
 
     root.mainloop()
 
